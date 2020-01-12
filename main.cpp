@@ -1,4 +1,4 @@
-#include <iostream>
+#include <iostream> //do ogarnięcia 2,11,12,13,15,49,50 gdyby baze się udało podłączyć
 #include <fstream>
 #include <ctime>
 #include <cstdlib>
@@ -23,7 +23,7 @@ int main(){
 		cin>>wyb;
 		system("cls");
 		switch(wyb){
-			case 1: //sprwad� przed wpisaniem do bazy czy podany login nie zosta� ju� zarejestrowany
+			case 1: //sprwadŸ przed wpisaniem do bazy czy podany login nie zosta³ ju¿ zarejestrowany
 				{
 				fstream plik;
 				plik.open("dane.txt",ios::in | ios::app);
