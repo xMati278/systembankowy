@@ -10,6 +10,8 @@ int main()
 {
     menu:
 
+    system("cls");
+    
     cout<<"Witaj, co chcesz zrobic?"<<endl;
 
     int choose;
