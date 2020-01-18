@@ -1,0 +1,51 @@
+# depslib dependency file v1.0
+1579352064 source:c:\users\osica\onedrive\pulpit\system bankowy\main.cpp
+	"db/connect.h"
+	"inc/query.h"
+	"inc/functions.h"
+
+1579339591 c:\program files (x86)\dev-cpp\mingw64\include\mysql.h
+	<sys/types.h>
+	<winsock.h>
+	"mysql_com.h"
+	"mysql_time.h"
+	"mysql_version.h"
+	"typelib.h"
+	"my_list.h"
+	"my_alloc.h"
+
+1579339591 c:\program files (x86)\dev-cpp\mingw64\include\mysql_com.h
+
+1579339591 c:\program files (x86)\dev-cpp\mingw64\include\mysql_time.h
+
+1579339585 c:\program files (x86)\dev-cpp\mingw64\include\mysql_version.h
+	<custom_conf.h>
+
+1579339589 c:\program files (x86)\dev-cpp\mingw64\include\typelib.h
+
+1579339591 c:\program files (x86)\dev-cpp\mingw64\include\my_list.h
+
+1579339591 c:\program files (x86)\dev-cpp\mingw64\include\my_alloc.h
+
+1579341156 c:\users\osica\onedrive\pulpit\system bankowy\connect.h
+	<iostream>
+	<windows.h>
+	<mysql.h>
+	<sstream>
+	<stdio.h>
+
+1579348914 c:\users\osica\onedrive\pulpit\system bankowy\db\connect.h
+	<iostream>
+	<windows.h>
+	<mysql.h>
+	<sstream>
+	<stdio.h>
+	<ctime>
+	<cstdlib>
+	<fstream>
+	<conio.h>
+
+1579353214 c:\users\osica\onedrive\pulpit\system bankowy\inc\functions.h
+
+1579352030 c:\users\osica\onedrive\pulpit\system bankowy\inc\query.h
+

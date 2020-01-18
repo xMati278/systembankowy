@@ -1,58 +1,47 @@
-#include <iostream> //do ogarnięcia 2,11,12,13,15,49,50 gdyby baze się udało podłączyć
-#include <fstream>
-#include <ctime>
-#include <cstdlib>
-#include<conio.h>
-using namespace std;
-int main(){
-	int a=0;
-	string login,haslo,wyb,nr_konta,b,acd,c,pin;
-	srand(time(NULL));
-	fstream plik;
-	plik.open("dane.txt", ios::in | ios::out); 
-	if(plik.good()==true)
-	{
-		plik.close();
-		cout<<"Przyznano dostep do bazy."<<endl<<endl;
-		short wyb;
-		menu:
-		cout<<"Witamy w systemie bankowym"<<endl;
-		cout<<"Wybierz co chcesz zrobic"<<endl;
-		cout<<"1. Rejestracja"<<endl;
-		
-		cin>>wyb;
-		system("cls");
-		switch(wyb){
-			case 1: //sprwadŸ przed wpisaniem do bazy czy podany login nie zosta³ ju¿ zarejestrowany
-				{
-				fstream plik;
-				plik.open("dane.txt",ios::in | ios::app);
-				cout<<"Podaj login: ";cin>>login;
-				cout<<"Podaj haslo: ";cin>>haslo;
-				while(a<16)
-				{
-					acd = rand ()%10+48;
-					b.append(acd);
-					a++;
-				}
-				nr_konta=b;
-					a=0;
-					while(a<4)
-				{
-					acd = rand ()%10+48;
-					c.append(acd);
-					a++;
-				}
-				pin=c;
-				cout<<"Oto twoj nr. konta: "<<nr_konta<<endl;;
-				cout<<"Oto twoj nr. pin: "<<pin<<endl;
-				plik<<login+" "<<haslo+" "<<nr_konta+" "<<pin<<endl;
-				plik.close();
-				cout<<"Rejestracja powiodla sie.";
-				getch();
-				system("cls");
-				goto menu;
-				} 
-		}
-	}
+#include "db/connect.h"
+#include "inc/query.h"
+#include "inc/functions.h"
+
+
+MYSQL* conn=connect(); //connect to db
+
+
+int main()
+{
+    menu:
+
+    cout<<"Witaj, co chcesz zrobic?"<<endl;
+
+    int choose;
+
+    start:
+
+    cout<<"1. Zaloguj sie"<<endl;
+    cout<<"2. Zarejestruj sie"<<endl;
+    cin>>choose;
+
+    switch(choose){
+
+    case 1:
+        login(conn);
+        break;
+
+    case 2:
+        if(regist(conn))
+            goto menu;
+        break;
+
+    default:
+        cout<<"Nieprawidlowy wybor"<<endl;
+        goto start;
+
+
+
+    }
+
+
+
+
+
+
 }
