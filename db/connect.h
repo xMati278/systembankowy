@@ -7,6 +7,8 @@
 #include <cstdlib>
 #include <fstream>
 #include<conio.h>
+#include <math.h>
+#include<iomanip>
 
 using namespace std;
 
