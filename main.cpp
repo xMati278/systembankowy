@@ -20,6 +20,8 @@ int main()
 
     cout<<"1. Zaloguj sie"<<endl;
     cout<<"2. Zarejestruj sie"<<endl;
+    cout<<"3. Kalkulator kapitalu"<<endl;
+    cout<<"4. Kalkulator walut"<<endl;
     cin>>choose;
 
     switch(choose){
