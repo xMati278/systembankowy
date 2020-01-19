@@ -13,10 +13,10 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-g" />
-					<Add directory="../../../../../Program Files (x86)/Dev-Cpp/MinGW64/include" />
+					<Add directory="../../../../../../Program Files (x86)/Dev-Cpp/MinGW64/include" />
 				</Compiler>
 				<Linker>
-					<Add library="../../../../../Program Files (x86)/Dev-Cpp/MinGW64/lib/libmysql.a" />
+					<Add library="../../../../../../Program Files (x86)/Dev-Cpp/MinGW64/lib/libmysql.a" />
 				</Linker>
 			</Target>
 			<Target title="Release">

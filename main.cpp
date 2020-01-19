@@ -11,7 +11,7 @@ int main()
     menu:
 
     system("cls");
-    
+
     cout<<"Witaj, co chcesz zrobic?"<<endl;
 
     int choose;
@@ -25,7 +25,8 @@ int main()
     switch(choose){
 
     case 1:
-        login(conn);
+        if(!login(conn))
+            goto menu;
         break;
 
     case 2:

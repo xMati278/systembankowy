@@ -1,0 +1,85 @@
+System bankowy
+
+1.Rejestracja  DONE
+
+-wprowadzenie loginu oraz sprawdzenie czy nie zosta³ ju¿ taki zapisany DONE
+
+-wprowadzenie has³a DONE
+
+-wygenerowanie nr konta, pinu oraz unikalnego kodu DONE
+
+2.Logowanie DONE
+
+-wprowadzenie loginu i has³a DONE
+
+-sprawdzenie czy login zosta³ ju¿ zapisany, jeœli tak sprawdzenie czy dla danego loginu zosta³o podane poprawnie has³o, jeœli tak to daj dostêp do konta, jeœli nie komunikat DONE
+
+4. Edycja pinu DONE
+
+-dla zalogowanego u¿ytkownika jest dostêpna edycja pinu DONE
+
+-u¿ytkownik musi podaæ swój pin, has³o oraz 2 razy nowy pin DONE
+
+-jeœli pin i has³o siê zgadzaj¹ nastêpuje zmiana pinu przypisanego do danego konta DONE
+
+5. Blokada karty DONE
+
+-u¿ytkownik podaje has³o, nr konta oraz pin DONE 
+
+-jeœli informacje siê zgadzaj¹ karta zostaje zablokowana DONE
+
+-zablokowana karta uniemo¿liwa wp³aty i wyp³aty NOT YET
+
+6. Wp³aty i wyp³aty pieniêdzy
+
+-osoba zalogowana musi podaæ pin, a nie zalogowana nr konta i pin
+
+-mo¿liwoœæ wyp³aty albo wp³aty pieniêdzy
+
+-przy próbie wyp³aty sumy wiêkszej ni¿ na koncie komunikat
+
+7.Data ostatniego logowania DONE
+
+-dla zalogowanych u¿ytkowników jest dostêpna opcja sprawdzenia daty ostatniego logowania DONE
+
+-data przy ka¿dym logowaniu jest aktualizowana DONE
+
+8. Konto g³ówne i oszczêdnoœciowe
+
+-zalogowany u¿ytkownik ma dostêp do dwóch  rodzai konta
+
+-g³ówne odpowiedzialne za wp³aty/wyp³aty oraz przelewy 
+
+-oszczêdnoœciowe na które mo¿na przelaæ œrodki tylko z konta g³ównego oraz wyp³aciæ œrodki tylko na g³ówne konto
+
+9.kalkulator lokaty
+
+-opcja dostêpna dla wszystkich u¿ytkowników
+
+-u¿ytkownik podaje kapita³, czas lokaty, oprocentowanie oraz ilosæ kapitalizacji w skali roku 
+
+10.kalkulator walutowy
+
+-u¿ytkownik mo¿e wybraæ na jak¹ walutê chce przeliczyæ swoje œrodki
+
+-program wyœwietla w zaokr¹gleniu do 2 miejsc po przecinku wynik
+
+-kalkulator nie zmienia waluty na koncie
+
+11.Szybki przelew
+
+-zalogowany u¿ytkownik podaje unikalny kod innego u¿ytkownika
+
+-jeœli taki istnieje daje mo¿liwoœæ  podania sumy i przelania
+
+-jeœli nie istnieje u¿ytkownik o takim kodzie  to wyœwietla komunikat i daje mo¿liwoœæ wpisania ponownie unikalnego kodu
+
+-program sprawdza czy u¿ytkownik ma dan¹ sumê na koncie
+
+12. Tradycyjny przelew
+
+-zalogowany u¿ytkownik mo¿e wybraæ z menu przelew tradycyjny
+
+-podaje on wtedy nr konta innego u¿ytkownika oraz kwotê
+
+-jeœli posiada tak¹ kwotê, co chce przelaæ przelew zostaje zatwierdzony
