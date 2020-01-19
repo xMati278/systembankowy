@@ -33,6 +33,15 @@ int main()
         if(regist(conn))
             goto menu;
         break;
+    case 3:
+        kalkulator_kapital();
+        goto menu;
+        break;
+
+    case 4:
+        kalkulator_walut();
+            goto menu;
+        break;
 
     default:
         cout<<"Nieprawidlowy wybor"<<endl;
