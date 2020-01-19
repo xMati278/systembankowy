@@ -2,84 +2,84 @@ System bankowy
 
 1.Rejestracja  DONE
 
--wprowadzenie loginu oraz sprawdzenie czy nie zosta³ ju¿ taki zapisany DONE
+-wprowadzenie loginu oraz sprawdzenie czy nie zostaÅ‚ juÅ¼ taki zapisany DONE
 
--wprowadzenie has³a DONE
+-wprowadzenie hasÅ‚a DONE
 
 -wygenerowanie nr konta, pinu oraz unikalnego kodu DONE
 
 2.Logowanie DONE
 
--wprowadzenie loginu i has³a DONE
+-wprowadzenie loginu i hasÅ‚a DONE
 
--sprawdzenie czy login zosta³ ju¿ zapisany, jeœli tak sprawdzenie czy dla danego loginu zosta³o podane poprawnie has³o, jeœli tak to daj dostêp do konta, jeœli nie komunikat DONE
+-sprawdzenie czy login zostaÅ‚ juÅ¼ zapisany, jeÅ›li tak sprawdzenie czy dla danego loginu zostaÅ‚o podane poprawnie hasÅ‚o, jeÅ›li tak to daj dostÄ™p do konta, jeÅ›li nie komunikat DONE
 
 4. Edycja pinu DONE
 
--dla zalogowanego u¿ytkownika jest dostêpna edycja pinu DONE
+-dla zalogowanego uÅ¼ytkownika jest dostÄ™pna edycja pinu DONE
 
--u¿ytkownik musi podaæ swój pin, has³o oraz 2 razy nowy pin DONE
+-uÅ¼ytkownik musi podaÄ‡ swÃ³j pin, hasÅ‚o oraz 2 razy nowy pin DONE
 
--jeœli pin i has³o siê zgadzaj¹ nastêpuje zmiana pinu przypisanego do danego konta DONE
+-jeÅ›li pin i hasÅ‚o siÄ™ zgadzajÄ… nastÄ™puje zmiana pinu przypisanego do danego konta DONE
 
 5. Blokada karty DONE
 
--u¿ytkownik podaje has³o, nr konta oraz pin DONE 
+-uÅ¼ytkownik podaje hasÅ‚o, nr konta oraz pin DONE 
 
--jeœli informacje siê zgadzaj¹ karta zostaje zablokowana DONE
+-jeÅ›li informacje siÄ™ zgadzajÄ… karta zostaje zablokowana DONE
 
--zablokowana karta uniemo¿liwa wp³aty i wyp³aty NOT YET
+-zablokowana karta uniemoÅ¼liwa wpÅ‚aty i wypÅ‚aty NOT YET
 
-6. Wp³aty i wyp³aty pieniêdzy
+6. WpÅ‚aty i wypÅ‚aty pieniÄ™dzy
 
--osoba zalogowana musi podaæ pin, a nie zalogowana nr konta i pin
+-osoba zalogowana musi podaÄ‡ pin, a nie zalogowana nr konta i pin
 
--mo¿liwoœæ wyp³aty albo wp³aty pieniêdzy
+-moÅ¼liwoÅ›Ä‡ wypÅ‚aty albo wpÅ‚aty pieniÄ™dzy
 
--przy próbie wyp³aty sumy wiêkszej ni¿ na koncie komunikat
+-przy prÃ³bie wypÅ‚aty sumy wiÄ™kszej niÅ¼ na koncie komunikat
 
 7.Data ostatniego logowania DONE
 
--dla zalogowanych u¿ytkowników jest dostêpna opcja sprawdzenia daty ostatniego logowania DONE
+-dla zalogowanych uÅ¼ytkownikÃ³w jest dostÄ™pna opcja sprawdzenia daty ostatniego logowania DONE
 
--data przy ka¿dym logowaniu jest aktualizowana DONE
+-data przy kaÅ¼dym logowaniu jest aktualizowana DONE
 
-8. Konto g³ówne i oszczêdnoœciowe
+8. Konto gÅ‚Ã³wne i oszczÄ™dnoÅ›ciowe
 
--zalogowany u¿ytkownik ma dostêp do dwóch  rodzai konta
+-zalogowany uÅ¼ytkownik ma dostÄ™p do dwÃ³ch  rodzai konta
 
--g³ówne odpowiedzialne za wp³aty/wyp³aty oraz przelewy 
+-gÅ‚Ã³wne odpowiedzialne za wpÅ‚aty/wypÅ‚aty oraz przelewy 
 
--oszczêdnoœciowe na które mo¿na przelaæ œrodki tylko z konta g³ównego oraz wyp³aciæ œrodki tylko na g³ówne konto
+-oszczÄ™dnoÅ›ciowe na ktÃ³re moÅ¼na przelaÄ‡ Å›rodki tylko z konta gÅ‚Ã³wnego oraz wypÅ‚aciÄ‡ Å›rodki tylko na gÅ‚Ã³wne konto
 
-9.kalkulator lokaty
+9.kalkulator lokaty DONE
 
--opcja dostêpna dla wszystkich u¿ytkowników
+-opcja dostÄ™pna dla wszystkich uÅ¼ytkownikÃ³w DONE
 
--u¿ytkownik podaje kapita³, czas lokaty, oprocentowanie oraz ilosæ kapitalizacji w skali roku 
+-uÅ¼ytkownik podaje kapitaÅ‚, czas lokaty, oprocentowanie oraz ilosÄ‡ kapitalizacji w skali roku DONE
 
-10.kalkulator walutowy
+10.kalkulator walutowy DONE
 
--u¿ytkownik mo¿e wybraæ na jak¹ walutê chce przeliczyæ swoje œrodki
+-uÅ¼ytkownik moÅ¼e wybraÄ‡ na jakÄ… walutÄ™ chce przeliczyÄ‡ swoje Å›rodki DONE
 
--program wyœwietla w zaokr¹gleniu do 2 miejsc po przecinku wynik
+-program wyÅ›wietla w zaokrÄ…gleniu do 2 miejsc po przecinku wynik DONE
 
--kalkulator nie zmienia waluty na koncie
+-kalkulator nie zmienia waluty na koncie DONE
 
 11.Szybki przelew
 
--zalogowany u¿ytkownik podaje unikalny kod innego u¿ytkownika
+-zalogowany uÅ¼ytkownik podaje unikalny kod innego uÅ¼ytkownika
 
--jeœli taki istnieje daje mo¿liwoœæ  podania sumy i przelania
+-jeÅ›li taki istnieje daje moÅ¼liwoÅ›Ä‡  podania sumy i przelania
 
--jeœli nie istnieje u¿ytkownik o takim kodzie  to wyœwietla komunikat i daje mo¿liwoœæ wpisania ponownie unikalnego kodu
+-jeÅ›li nie istnieje uÅ¼ytkownik o takim kodzie  to wyÅ›wietla komunikat i daje moÅ¼liwoÅ›Ä‡ wpisania ponownie unikalnego kodu
 
--program sprawdza czy u¿ytkownik ma dan¹ sumê na koncie
+-program sprawdza czy uÅ¼ytkownik ma danÄ… sumÄ™ na koncie
 
 12. Tradycyjny przelew
 
--zalogowany u¿ytkownik mo¿e wybraæ z menu przelew tradycyjny
+-zalogowany uÅ¼ytkownik moÅ¼e wybraÄ‡ z menu przelew tradycyjny
 
--podaje on wtedy nr konta innego u¿ytkownika oraz kwotê
+-podaje on wtedy nr konta innego uÅ¼ytkownika oraz kwotÄ™
 
--jeœli posiada tak¹ kwotê, co chce przelaæ przelew zostaje zatwierdzony
+-jeÅ›li posiada takÄ… kwotÄ™, co chce przelaÄ‡ przelew zostaje zatwierdzony
