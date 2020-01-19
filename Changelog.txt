@@ -44,9 +44,9 @@ System bankowy
 
 -data przy każdym logowaniu jest aktualizowana DONE
 
-8. Konto główne i oszczędnościowe
+8. Konto główne i oszczędnościowe 
 
--zalogowany użytkownik ma dostęp do dwóch  rodzai konta
+-zalogowany użytkownik ma dostęp do dwóch  rodzai konta DONE
 
 -główne odpowiedzialne za wpłaty/wypłaty oraz przelewy 
 
