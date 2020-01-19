@@ -69,3 +69,25 @@
 
 1579453845 c:\users\osica\onedrive\pulpit\bank\systembankowy\inc\functions.h
 
+1579456568 source:c:\users\osica\onedrive\pulpit\nowy folder\systembankowy\main.cpp
+	"db/connect.h"
+	"inc/query.h"
+	"inc/functions.h"
+
+1579456836 c:\users\osica\onedrive\pulpit\nowy folder\systembankowy\db\connect.h
+	<iostream>
+	<windows.h>
+	<mysql.h>
+	<sstream>
+	<stdio.h>
+	<ctime>
+	<cstdlib>
+	<fstream>
+	<conio.h>
+	<math.h>
+	<iomanip>
+
+1579456481 c:\users\osica\onedrive\pulpit\nowy folder\systembankowy\inc\query.h
+
+1579456481 c:\users\osica\onedrive\pulpit\nowy folder\systembankowy\inc\functions.h
+

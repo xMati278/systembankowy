@@ -22,6 +22,7 @@ MYSQL* connect(){
     if(!conn){
 
         cout<<"Failed connect to db";
+        exit(0);
         return 0;
 
     }

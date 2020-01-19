@@ -4,7 +4,7 @@ bool regist(MYSQL* conn){
     MYSQL_RES* res;
 
     cout<<"Rozpoczynam proces rejestracji"<<endl;
-    Sleep(2500);
+    getch();
     system( "cls" );
 
     string login;
@@ -21,7 +21,7 @@ bool regist(MYSQL* conn){
     if(check_if_exist(conn, "users", "login", login )){
 
         cout<<"Ten login jest zajety. Prosze wpisac inny login"<<endl;
-        Sleep(2000);
+        getch();
         system("cls");
         goto exist_login;
 
@@ -230,7 +230,7 @@ bool change_pin(MYSQL* conn, string login){
         qstate = mysql_query(conn, q2);
 
         cout<<"Pin zostal zmienieniony"<<endl;
-        Sleep(1500);
+        getch();
         return true;
 
     }
