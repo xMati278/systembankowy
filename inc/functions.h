@@ -465,6 +465,98 @@ bool login(MYSQL* conn){
     }
 
 }
+bool kalkulator_kapital(){
+    system("cls");
+    float KP,KO,CT,SP,WYNKK;
+    cout<<"Kapital poczatkowy: ";
+    cin>>KP;
+    cout<<"Liczba kapitalizacji odsetek w roku: ";
+    cin>>KO;
+    cout<<"Czas trwania inwestycji(w latach): ";
+    cin>>CT;
+    cout<<"Stopa procentowa(w postaci liczby dziesietnej z znakiem . ): ";
+    cin>>SP;
+    WYNKK=KP*pow(1+(SP/KO), KO*CT);
+    WYNKK=WYNKK*100;
+    WYNKK=round(WYNKK);
+    WYNKK=WYNKK/100;
+    cout<<"Koncowy kapital: "<<WYNKK<<endl;
+    getch();
+    system("cls");
+}
+bool kalkulator_walut(){
+    float WP,wWP;
+    int kal_wal_wyb;
+    cout<<"Wprowadz kwote do przeliczenia na inna walute: ";
+    cin>>WP;
+    kalkulator_wyb:
+    cout<<"Dostepne waluty: "<<endl;
+    cout<<"1. Dolar Amerykanski (USD)"<<endl;
+    cout<<"2. Euro (EUR)"<<endl;
+    cout<<"3. Jen Japonski (JPY)"<<endl;
+    cout<<"4. Funt Szterling (GBP)"<<endl;
+    cout<<"5. Frank Szwajcarski (CHF)"<<endl<<endl;
+    cout<<"Na jaka walute chcesz przeliczyc kwote? ";
+    cin>>kal_wal_wyb;
+    switch(kal_wal_wyb)
+    case 1:{
+        {
+        wWP=WP/3.8;
+        wWP=wWP*100;
+        wWP=round(wWP);
+        wWP=wWP/100;
+        cout<<"Podana kwota w przeliczeniu na USD to: "<<wWP<<endl;
+        getch();
+        break;
+        }
+    case 2:
+        {
+        wWP=WP/4.24;
+        wWP=wWP*100;
+        wWP=round(wWP);
+        wWP=wWP/100;
+        cout<<"Podana kwota w przeliczeniu na EUR to: "<<wWP<<endl;
+        getch();
+        break;
+        }
+    case 3:
+        {
+        wWP=WP/0.035;
+        wWP=wWP*100;
+        wWP=round(wWP);
+        wWP=wWP/100;
+        cout<<"Podana kwota w przeliczeniu na JPY to: "<<wWP<<endl;
+        getch();
+        break;
+        }
+    case 4:
+        {
+        wWP=WP/4.98;
+        wWP=wWP*100;
+        wWP=round(wWP);
+        wWP=wWP/100;
+        cout<<"Podana kwota w przeliczeniu na GBP to: "<<wWP<<endl;
+        getch();
+        break;
+        }
+    case 5:
+        {
+        wWP=WP/3.95;
+        wWP=wWP*100;
+        wWP=round(wWP);
+        wWP=wWP/100;
+        cout<<"Podana kwota w przeliczeniu na CHF to: "<<wWP<<endl;
+        getch();
+        break;
+        }
+    default:
+        {
+        cout<<"Podaj poprawny wybor waluty."<<endl;
+        getch();
+        goto kalkulator_wyb;
+        }
+}
+}
 
 
 
