@@ -22,6 +22,7 @@ int main()
     cout<<"2. Zarejestruj sie"<<endl;
     cout<<"3. Kalkulator kapitalu"<<endl;
     cout<<"4. Kalkulator walut"<<endl;
+    cout<<"5. Wplata / Wyplata srodkow z konta"<<endl;
     cin>>choose;
 
     switch(choose){
@@ -44,6 +45,10 @@ int main()
         kalkulator_walut();
             goto menu;
         break;
+    case 5:
+        bankomat(conn);
+            goto menu;
+        break;        
 
     default:
         cout<<"Nieprawidlowy wybor"<<endl;
