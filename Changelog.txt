@@ -32,11 +32,11 @@ System bankowy
 
 6. Wpłaty i wypłaty pieniędzy
 
--osoba zalogowana musi podać pin, a nie zalogowana nr konta i pin
+-osoba zalogowana musi podać pin, a nie zalogowana nr konta i pin NOT YET (nie zalogowana osoba ma dostęp do menu ale brak dostępu do bazy) 
 
--możliwość wypłaty albo wpłaty pieniędzy
+-możliwość wypłaty albo wpłaty pieniędzy NOT YET(wczytuje pin nr.konta , problem z sprawdzeniem długości, brak połączenia z bazą)
 
--przy próbie wypłaty sumy większej niż na koncie komunikat
+-przy próbie wypłaty sumy większej niż na koncie komunikat NOT YET
 
 7.Data ostatniego logowania DONE
 
