@@ -557,6 +557,49 @@ bool kalkulator_walut(){
         }
 }
 }
+bool bankomat(MYSQL* conn){
+    bankomat:
+    int bankomat_wyb, bankomat_nr, bankomat_pin,bankomat_kasa,n,p;
+    cout<<"Co chcesz zrobic?"<<endl;
+    cout<<"1. Wplata  gotowki"<<endl;
+    cout<<"2. Wyplata gotowki"<<endl;
+    cout<<"3. Wyjscie"<<endl;
+    cin>>bankomat_wyb;
+    if(bankomat_wyb==1 || bankomat_wyb==2)
+    {
+        cout<<"Podaj nr.konta: ";
+        cin>>bankomat_nr;
+        cout<<"Podaj pin: ";
+        cin>>bankomat_pin;
+     /*   n=bankomat_nr.length();
+        p=bankomat_pin.length(); */
+
+        if(n==16 && p==4)
+        {
+            if(bankomat_wyb==1)
+                {
+            cout<<"Podaj ile chcesz wplacic: ";
+            cin>>bankomat_kasa;
+                }
+            if(bankomat_wyb==2)
+                {
+            cout<<"Podaj ile chcesz wyplacic: ";
+            cin>>bankomat_kasa;
+                }
+        }
+        else
+        {
+            cout<<"Podaj poprawny nr. konta oraz pin"<<endl;
+            getch();
+            system("cls");
+            goto bankomat;
+        }
+    }
+    if(bankomat_wyb==3)
+            {
+        return(0);
+            }
+    }
 
 
 
