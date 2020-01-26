@@ -578,7 +578,7 @@ bool bankomat(MYSQL* conn){
 
         int qstate = 0;
         stringstream ss1;
-        ss1 << "SELECT id_owner,amount,type FROM account where number_account= '" << bankomat_nr << "'";
+        ss1 << "SELECT id_owner,amount,type,block FROM account where number_account= '" << bankomat_nr << "'";
 
         string query = ss1.str();
 
@@ -614,6 +614,14 @@ bool bankomat(MYSQL* conn){
                 goto bankomat;
 
             }
+
+            if(strcmp(row[3], "1")==0){
+
+                cout<<"Konto jest zablokowane"<<endl;
+                goto bankomat;
+
+            }
+
 
             if(bankomat_wyb==1){
 
