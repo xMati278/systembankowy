@@ -30,13 +30,13 @@ System bankowy
 
 -zablokowana karta uniemożliwa wpłaty i wypłaty NOT YET
 
-6. Wpłaty i wypłaty pieniędzy
+6. Wpłaty i wypłaty pieniędzy DONE
 
--osoba zalogowana musi podać pin, a nie zalogowana nr konta i pin NOT YET (nie zalogowana osoba ma dostęp do menu ale brak dostępu do bazy) 
+-osoba musi podać pin oraz numer konta DONE
 
--możliwość wypłaty albo wpłaty pieniędzy NOT YET(wczytuje pin nr.konta , problem z sprawdzeniem długości, brak połączenia z bazą)
+-możliwość wypłaty albo wpłaty pieniędzy DONE
 
--przy próbie wypłaty sumy większej niż na koncie komunikat NOT YET
+-przy próbie wypłaty sumy większej niż na koncie komunikat DONE
 
 7.Data ostatniego logowania DONE
 
@@ -48,7 +48,7 @@ System bankowy
 
 -zalogowany użytkownik ma dostęp do dwóch  rodzai konta DONE
 
--główne odpowiedzialne za wpłaty/wypłaty oraz przelewy 
+-główne odpowiedzialne za wpłaty/wypłaty oraz przelewy (zablokowano mozliwosc wplaty/wyplaty z konta oszczednosciowego z poziomu bankomatu) 50/50
 
 -oszczędnościowe na które można przelać środki tylko z konta głównego oraz wypłacić środki tylko na główne konto
 
