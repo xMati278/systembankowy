@@ -66,15 +66,15 @@ System bankowy
 
 -kalkulator nie zmienia waluty na koncie DONE
 
-11.Szybki przelew
+11.Szybki przelew DONE
 
--zalogowany użytkownik podaje unikalny kod innego użytkownika
+-zalogowany użytkownik podaje unikalny kod innego użytkownika DONE
 
--jeśli taki istnieje daje możliwość  podania sumy i przelania
+-jeśli taki istnieje daje możliwość  podania sumy i przelania DONE
 
--jeśli nie istnieje użytkownik o takim kodzie  to wyświetla komunikat i daje możliwość wpisania ponownie unikalnego kodu
+-jeśli nie istnieje użytkownik o takim kodzie  to wyświetla komunikat i daje możliwość wpisania ponownie unikalnego kodu DONE
 
--program sprawdza czy użytkownik ma daną sumę na koncie
+-program sprawdza czy użytkownik ma daną sumę na koncie DONE
 
 12. Tradycyjny przelew
 

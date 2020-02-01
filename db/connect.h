@@ -16,7 +16,7 @@ MYSQL* connect(){
 
     MYSQL* conn;
     conn = mysql_init(0);
-    conn = mysql_real_connect(conn, "host", "login", "haslo", "baza", 0, NULL, 0);
+    conn = mysql_real_connect(conn, "pi", "wsm", "1234", "wsm", 0, NULL, 0);
 
 
     if(!conn){

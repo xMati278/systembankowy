@@ -74,7 +74,7 @@
 	"inc/query.h"
 	"inc/functions.h"
 
-1579456836 c:\users\osica\onedrive\pulpit\nowy folder\systembankowy\db\connect.h
+1579460812 c:\users\osica\onedrive\pulpit\nowy folder\systembankowy\db\connect.h
 	<iostream>
 	<windows.h>
 	<mysql.h>
@@ -89,5 +89,5 @@
 
 1579456481 c:\users\osica\onedrive\pulpit\nowy folder\systembankowy\inc\query.h
 
-1579456481 c:\users\osica\onedrive\pulpit\nowy folder\systembankowy\inc\functions.h
+1579456966 c:\users\osica\onedrive\pulpit\nowy folder\systembankowy\inc\functions.h
 
