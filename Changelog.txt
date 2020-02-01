@@ -30,13 +30,13 @@ System bankowy
 
 -zablokowana karta uniemożliwa wpłaty i wypłaty NOT YET
 
-6. Wpłaty i wypłaty pieniędzy
+6. Wpłaty i wypłaty pieniędzy DONE
 
--osoba zalogowana musi podać pin, a nie zalogowana nr konta i pin
+-osoba musi podać pin oraz numer konta DONE
 
--możliwość wypłaty albo wpłaty pieniędzy
+-możliwość wypłaty albo wpłaty pieniędzy DONE
 
--przy próbie wypłaty sumy większej niż na koncie komunikat
+-przy próbie wypłaty sumy większej niż na koncie komunikat DONE
 
 7.Data ostatniego logowania DONE
 
@@ -44,11 +44,11 @@ System bankowy
 
 -data przy każdym logowaniu jest aktualizowana DONE
 
-8. Konto główne i oszczędnościowe
+8. Konto główne i oszczędnościowe 
 
--zalogowany użytkownik ma dostęp do dwóch  rodzai konta
+-zalogowany użytkownik ma dostęp do dwóch  rodzai konta DONE
 
--główne odpowiedzialne za wpłaty/wypłaty oraz przelewy 
+-główne odpowiedzialne za wpłaty/wypłaty oraz przelewy (zablokowano mozliwosc wplaty/wyplaty z konta oszczednosciowego z poziomu bankomatu) 50/50
 
 -oszczędnościowe na które można przelać środki tylko z konta głównego oraz wypłacić środki tylko na główne konto
 

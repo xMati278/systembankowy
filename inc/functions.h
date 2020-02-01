@@ -557,6 +557,171 @@ bool kalkulator_walut(){
         }
 }
 }
+bool bankomat(MYSQL* conn){
+    bankomat:
+    int bankomat_wyb, bankomat_nr,bankomat_kasa,n,p;
+    string bankomat_pin;
+    cout<<"Co chcesz zrobic?"<<endl;
+    cout<<"1. Wplata  gotowki"<<endl;
+    cout<<"2. Wyplata gotowki"<<endl;
+    cout<<"3. Wyjscie"<<endl;
+    cin>>bankomat_wyb;
+    if(bankomat_wyb==1 || bankomat_wyb==2)
+    {
+        cout<<"Podaj nr.konta: ";
+        cin>>bankomat_nr;
+        cout<<"Podaj pin: ";
+        cin>>bankomat_pin;
+
+        MYSQL_ROW row,row1;
+        MYSQL_RES* res;
+
+        int qstate = 0;
+        stringstream ss1;
+        ss1 << "SELECT id_owner,amount,type,block FROM account where number_account= '" << bankomat_nr << "'";
+
+        string query = ss1.str();
+
+        const char* q = query.c_str();
+        qstate = mysql_query(conn, q);
+
+        res = mysql_store_result(conn);
+        row= mysql_fetch_row(res);
+
+        char* owner_id=row[0];
+
+
+        stringstream ss2;
+        ss2 << "SELECT pin FROM users where id= '" << owner_id << "'";
+
+        string query1 = ss2.str();
+
+        const char* q1 = query1.c_str();
+        qstate = mysql_query(conn, q1);
+
+        res = mysql_store_result(conn);
+        row1= mysql_fetch_row(res);
+
+        char* pin=row1[0];
+
+        const char* bank_pin = bankomat_pin.c_str();
+
+        if(strcmp(pin, bank_pin)==0){
+
+            if(strcmp(row[2], "savings")==0){
+
+                cout<<"Nie mozesz wplacac/wyplacac pieniedzy z konta oszczednosciowego w bankomacie"<<endl;
+                goto bankomat;
+
+            }
+
+            if(strcmp(row[3], "1")==0){
+
+                cout<<"Konto jest zablokowane"<<endl;
+                goto bankomat;
+
+            }
+
+
+            if(bankomat_wyb==1){
+
+                cout<<"Podaj ile chcesz wplacic: ";
+                cin>>bankomat_kasa;
+
+                stringstream ss2;
+                ss2 << "UPDATE account SET amount = amount+ " << bankomat_kasa << " WHERE number_account = '" << bankomat_nr << "'";
+                string query2 = ss2.str();
+                const char* q2 = query2.c_str();
+                qstate = mysql_query(conn, q2);
+
+                cout<<"Pieniadze zostaly wplacone"<<endl;
+
+                qstate = mysql_query(conn, q);
+
+                res = mysql_store_result(conn);
+                row= mysql_fetch_row(res);
+
+                cout<<"Aktualny stan konta: "<<row[1]<<" PLN"<<endl;
+
+            }
+
+              if(bankomat_wyb==2)
+                {
+                    cout<<"Podaj ile chcesz wyplacic: ";
+                    cin>>bankomat_kasa;
+
+
+                    qstate = mysql_query(conn, q);
+
+                    res = mysql_store_result(conn);
+                    row= mysql_fetch_row(res);
+
+                    int val = atoi(row[1]);
+
+                    if(val<bankomat_kasa){
+
+                        cout<<"Brak srodkow"<<endl;
+
+                    }else{
+
+                        stringstream ss2;
+                        ss2 << "UPDATE account SET amount = amount- " << bankomat_kasa << " WHERE number_account = '" << bankomat_nr << "'";
+                        string query2 = ss2.str();
+                        const char* q2 = query2.c_str();
+                        qstate = mysql_query(conn, q2);
+
+                        cout<<"Pieniadze zostaly wyplacone"<<endl;
+
+                        qstate = mysql_query(conn, q);
+
+                        res = mysql_store_result(conn);
+                        row= mysql_fetch_row(res);
+
+                        cout<<"Aktualny stan konta: "<<row[1]<<" PLN"<<endl;
+
+                    }
+
+                }
+        }
+        else
+        cout<<"Dane nieprawidlowe"<<endl;
+
+
+
+     /*   n=bankomat_nr.length();
+        p=bankomat_pin.length();
+
+        if(n==16 && p==4)
+        {
+            if(bankomat_wyb==1)
+                {
+            cout<<"Podaj ile chcesz wplacic: ";
+            cin>>bankomat_kasa;
+                }
+            if(bankomat_wyb==2)
+                {
+            cout<<"Podaj ile chcesz wyplacic: ";
+            cin>>bankomat_kasa;
+                }
+        }
+        else
+        {
+            cout<<"Podaj poprawny nr. konta oraz pin"<<endl;
+            getch();
+            system("cls");
+            goto bankomat;
+        }
+    }
+
+    */
+    }
+
+    if(bankomat_wyb==3)
+            {
+        return(0);
+            }
+
+}
 
 
 
