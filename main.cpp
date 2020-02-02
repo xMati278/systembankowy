@@ -2,9 +2,7 @@
 #include "inc/query.h"
 #include "inc/functions.h"
 
-
 MYSQL* conn=connect(); //connect to db
-
 
 int main()
 {
@@ -48,19 +46,13 @@ int main()
     case 5:
         bankomat(conn);
             goto menu;
-        break;        
+        break;
 
     default:
         cout<<"Nieprawidlowy wybor"<<endl;
         goto start;
 
 
-
     }
-
-
-
-
-
 
 }

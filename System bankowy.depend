@@ -74,7 +74,7 @@
 	"inc/query.h"
 	"inc/functions.h"
 
-1579460812 c:\users\osica\onedrive\pulpit\nowy folder\systembankowy\db\connect.h
+1579456836 c:\users\osica\onedrive\pulpit\nowy folder\systembankowy\db\connect.h
 	<iostream>
 	<windows.h>
 	<mysql.h>
@@ -89,14 +89,14 @@
 
 1579456481 c:\users\osica\onedrive\pulpit\nowy folder\systembankowy\inc\query.h
 
-1579456966 c:\users\osica\onedrive\pulpit\nowy folder\systembankowy\inc\functions.h
+1579456481 c:\users\osica\onedrive\pulpit\nowy folder\systembankowy\inc\functions.h
 
-1580042372 source:c:\users\osica\onedrive\pulpit\nowy folder (2)\systembankowy\main.cpp
+1580652788 source:c:\users\osica\onedrive\pulpit\nowy folder (2)\systembankowy\main.cpp
 	"db/connect.h"
 	"inc/query.h"
 	"inc/functions.h"
 
-1580042397 c:\users\osica\onedrive\pulpit\nowy folder (2)\systembankowy\db\connect.h
+1580653824 c:\users\osica\onedrive\pulpit\nowy folder (2)\systembankowy\db\connect.h
 	<iostream>
 	<windows.h>
 	<mysql.h>
@@ -109,7 +109,29 @@
 	<math.h>
 	<iomanip>
 
-1580042372 c:\users\osica\onedrive\pulpit\nowy folder (2)\systembankowy\inc\query.h
+1580558775 c:\users\osica\onedrive\pulpit\nowy folder (2)\systembankowy\inc\query.h
 
-1580045975 c:\users\osica\onedrive\pulpit\nowy folder (2)\systembankowy\inc\functions.h
+1580652587 c:\users\osica\onedrive\pulpit\nowy folder (2)\systembankowy\inc\functions.h
+
+1580558775 source:c:\users\osica\onedrive\pulpit\systembankowy\main.cpp
+	"db/connect.h"
+	"inc/query.h"
+	"inc/functions.h"
+
+1580562816 c:\users\osica\onedrive\pulpit\systembankowy\db\connect.h
+	<iostream>
+	<windows.h>
+	<mysql.h>
+	<sstream>
+	<stdio.h>
+	<ctime>
+	<cstdlib>
+	<fstream>
+	<conio.h>
+	<math.h>
+	<iomanip>
+
+1580558775 c:\users\osica\onedrive\pulpit\systembankowy\inc\query.h
+
+1580562355 c:\users\osica\onedrive\pulpit\systembankowy\inc\functions.h
 

@@ -28,7 +28,7 @@ System bankowy
 
 -jeśli informacje się zgadzają karta zostaje zablokowana DONE
 
--zablokowana karta uniemożliwa wpłaty i wypłaty NOT YET
+-zablokowana karta uniemożliwa wpłaty i wypłaty DONE
 
 6. Wpłaty i wypłaty pieniędzy DONE
 
@@ -44,11 +44,11 @@ System bankowy
 
 -data przy każdym logowaniu jest aktualizowana DONE
 
-8. Konto główne i oszczędnościowe 
+8. Konto główne i oszczędnościowe DONE
 
 -zalogowany użytkownik ma dostęp do dwóch  rodzai konta DONE
 
--główne odpowiedzialne za wpłaty/wypłaty oraz przelewy (zablokowano mozliwosc wplaty/wyplaty z konta oszczednosciowego z poziomu bankomatu) 50/50
+-główne odpowiedzialne za wpłaty/wypłaty oraz przelewy (zablokowano mozliwosc wplaty/wyplaty z konta oszczednosciowego z poziomu bankomatu) DONE
 
 -oszczędnościowe na które można przelać środki tylko z konta głównego oraz wypłacić środki tylko na główne konto
 
@@ -76,10 +76,12 @@ System bankowy
 
 -program sprawdza czy użytkownik ma daną sumę na koncie DONE
 
-12. Tradycyjny przelew
+12. Tradycyjny przelew DONE
 
--zalogowany użytkownik może wybrać z menu przelew tradycyjny
+-zalogowany użytkownik może wybrać z menu przelew tradycyjny DONE
 
--podaje on wtedy nr konta innego użytkownika oraz kwotę
+-podaje on wtedy nr konta oraz kwotę DONE
 
--jeśli posiada taką kwotę, co chce przelać przelew zostaje zatwierdzony
+-jeśli posiada taką kwotę, co chce przelać przelew zostaje zatwierdzony DONE
+
+13. Historia konta DONE

@@ -326,6 +326,214 @@ bool block_cart(MYSQL* conn,string id,string login){
 
 }
 
+bool fast_transfer(MYSQL* conn,string id_own,string login){
+
+    system("cls");
+    cout<<"Szybki przelew"<<endl;
+
+    int qstate = 0;
+    MYSQL_ROW row;
+    MYSQL_RES* res;
+
+    stringstream ss1;
+    ss1 << "SELECT block,amount FROM account where id_owner= '" << id_own << "'  AND type= 'primary' ";
+
+    string query = ss1.str();
+
+    const char* q = query.c_str();
+    qstate = mysql_query(conn, q);
+
+    res = mysql_store_result(conn);
+    row= mysql_fetch_row(res);
+
+     if(strcmp(row[0], "1")==0){
+
+        cout<<"Konto jest zablokowane"<<endl;
+        Sleep(2000);
+        return true;
+    }
+
+    string id_cin;
+    int value;
+
+    id:
+
+    cout<<"Podaj unikalny numer osoby do ktorej chcesz przelac pieniadze"<<endl;
+    cin>>id_cin;
+
+    if(id_cin!=id_own){
+
+        if(check_if_exist(conn, "users", "id", id_cin )){
+
+            val:
+
+            cout<<"Ile PLN chcesz przeslac?"<<endl;
+            cin>>value;
+
+            int val = atoi(row[1]);
+
+            if(val<value){
+
+                cout<<"Brak srodkow"<<endl;
+                goto val;
+
+            }
+
+            stringstream ss2,ss3,ss4;
+            ss2 << "UPDATE account SET amount = amount- " << value << " WHERE id_owner = " << id_own << " AND type='primary';";
+            ss3 << "UPDATE account SET amount = amount+ " << value << " WHERE id_owner = " << id_cin << " AND type='primary';";
+            ss4 << "INSERT INTO `transactions`(`id_sending`, `id_receiving`, `value`) VALUES (" << id_own << "," << id_cin << "," << value << ")";
+            string query2 = ss2.str();
+            const char* q2 = query2.c_str();
+
+            string query3 = ss3.str();
+            const char* q3 = query3.c_str();
+
+            string query4 = ss4.str();
+            const char* q4 = query4.c_str();
+
+            mysql_query(conn, q2 );
+            mysql_query(conn, q3 );
+            mysql_query(conn, q4 );
+
+            cout<<"Pomyslnie przelano pieniadze"<<endl;
+            Sleep(2000);
+            return true;
+
+        }
+        else{
+
+            cout<<"Podales nieprawidlowe id"<<endl;
+            goto id;
+            Sleep(1000);
+
+        }
+
+    }
+    else{
+
+        cout<<"Podales swoje id!"<<endl;
+        Sleep(2000);
+    }
+
+
+}
+
+bool traditional_transfer(MYSQL* conn,string id_own,string login,string primary_account){
+
+    system("cls");
+    cout<<"Tradycyjny przelew"<<endl;
+
+    string number_account;
+    int value;
+
+    int qstate = 0;
+    MYSQL_ROW row;
+    MYSQL_RES* res;
+
+    stringstream ss1;
+    ss1 << "SELECT block,amount FROM account where number_account= '" << primary_account << "' ";
+
+    string query = ss1.str();
+
+    const char* q = query.c_str();
+    qstate = mysql_query(conn, q);
+
+    res = mysql_store_result(conn);
+    row= mysql_fetch_row(res);
+
+     if(strcmp(row[0], "1")==0){
+
+        cout<<"Konto jest zablokowane"<<endl;
+        Sleep(2000);
+        return true;
+    }
+
+    start:
+
+    cout<<"Podaj numer konta na ktory chcesz przelac pieniadze"<<endl;
+    cin>>number_account;
+
+    if(number_account!=primary_account){
+
+        if(check_if_exist(conn, "account", "number_account", number_account )){
+
+            val:
+
+            cout<<"Ile PLN chcesz przeslac?"<<endl;
+            cin>>value;
+
+            int val = atoi(row[1]);
+
+            if(val<value){
+
+                cout<<"Brak srodkow"<<endl;
+                goto val;
+
+            }
+
+            stringstream ss2,ss3,ss4;
+            ss2 << "UPDATE account SET amount = amount- " << value << " WHERE number_account = " << primary_account << ";";
+            ss3 << "UPDATE account SET amount = amount+ " << value << " WHERE number_account = " << number_account << ";";
+            ss4 << "INSERT INTO `transactions`(`account_sending`, `account_receiving`, `value`) VALUES (" << primary_account << "," << number_account << "," << value << ")";
+            string query2 = ss2.str();
+            const char* q2 = query2.c_str();
+
+            string query3 = ss3.str();
+            const char* q3 = query3.c_str();
+
+            string query4 = ss4.str();
+            const char* q4 = query4.c_str();
+
+            mysql_query(conn, q2 );
+            mysql_query(conn, q3 );
+            mysql_query(conn, q4 );
+
+            cout<<"Pomyslnie przelano pieniadze"<<endl;
+            Sleep(2000);
+            return true;
+
+        } else{
+
+            cout<<"Numer konta nieprawidlowy"<<endl;
+            Sleep(1000);
+            goto start;
+        }
+    }else
+    {
+        cout<<"Wybrales swoje glowne konto numer konta"<<endl;
+        Sleep(1000);
+        goto start;
+
+    }
+}
+
+bool account_history(MYSQL* conn,string id_own,string primary_account,string savings_account){
+
+    system("cls");
+    cout<<"Historia konta"<<endl<<"Twoje ID: "<<id_own<<endl;;
+
+    MYSQL_ROW row;
+    MYSQL_RES* res;
+
+    stringstream ss1;
+
+    ss1 << "SELECT * FROM `transactions` WHERE `id_sending`= " << id_own << " OR `id_receiving`=" << id_own << "  OR `account_sending`= " << primary_account << " OR `account_receiving`= " << primary_account << "  OR `account_sending`= " << savings_account << " OR `account_receiving`= " << savings_account << " ";
+
+    string query1 = ss1.str();
+    const char* q1 = query1.c_str();
+    mysql_query(conn, q1);
+
+    res = mysql_store_result(conn);
+
+    while(row = mysql_fetch_row(res)){
+
+        cout<<"Id wysylajacego: "<<row[1]<<" | "<<"Id odbierajacego: "<<row[2]<<" | "<<"Numer konta wysylajacego: "<<row[3]<<" | "<<"Numer konta odbierajacego: "<<row[4]<<" | "<<"PLN: "<<row[5]<<" | "<<"Data: "<<row[6]<<endl;
+
+    }
+
+    getch();
+}
 
 bool user_panel(MYSQL* conn, string login ){
 
@@ -360,15 +568,22 @@ bool user_panel(MYSQL* conn, string login ){
     cout<<"Ostatnio zalogowales sie "<<row[4]<<endl;
 
     string type,status;
+    string primary_account,savings_account;
 
     res = mysql_store_result(conn);
 
     while(row1 = mysql_fetch_row(res)){
 
-        if(strcmp(row1[2], "primary")==0)
+        if(strcmp(row1[2], "primary")==0){
              type="glownego";
-        else
+             primary_account=row1[3];
+        }
+        else{
              type="oszczednosciowego";
+             savings_account=row1[3];
+
+
+        }
 
         if(strcmp(row1[5], "0")==0)
              status="odblokowane";
@@ -394,7 +609,10 @@ bool user_panel(MYSQL* conn, string login ){
     cout<<"Co chcesz zrobic?"<<endl;
     cout<<"1. Zmien pin"<<endl;
     cout<<"2. Zablokuj/Odblokuj karte"<<endl;
-    cout<<"3. Wyloguj sie"<<endl;
+    cout<<"3. Szybki przelew"<<endl;
+    cout<<"4. Tradycyjny przelew"<<endl;
+    cout<<"5. Historia konta"<<endl;
+    cout<<"6. Wyloguj sie"<<endl;
     cin>>action;
 
     switch(action){
@@ -408,6 +626,18 @@ bool user_panel(MYSQL* conn, string login ){
             goto start;
         break;
     case 3:
+        if(fast_transfer(conn,row[0],login))
+            goto start;
+        break;
+    case 4:
+        if(traditional_transfer(conn,row[0],login,primary_account))
+            goto start;
+        break;
+    case 5:
+        if(account_history(conn,row[0],primary_account,savings_account))
+            goto start;
+        break;
+    case 6:
         return false;
         break;
 
@@ -415,9 +645,7 @@ bool user_panel(MYSQL* conn, string login ){
         cout<<"Nieprawidlowy wybor"<<endl;
         goto start;
 
-
     }
-
 
 }
 
