@@ -787,8 +787,9 @@ bool kalkulator_walut(){
 }
 bool bankomat(MYSQL* conn){
     bankomat:
-    int bankomat_wyb, bankomat_nr,bankomat_kasa,n,p;
-    string bankomat_pin;
+    int bankomat_wyb,bankomat_kasa,n,p;
+    string bankomat_pin,bankomat_nr;
+    
     cout<<"Co chcesz zrobic?"<<endl;
     cout<<"1. Wplata  gotowki"<<endl;
     cout<<"2. Wyplata gotowki"<<endl;
@@ -839,6 +840,7 @@ bool bankomat(MYSQL* conn){
             if(strcmp(row[2], "savings")==0){
 
                 cout<<"Nie mozesz wplacac/wyplacac pieniedzy z konta oszczednosciowego w bankomacie"<<endl;
+                getch();
                 goto bankomat;
 
             }
@@ -846,6 +848,7 @@ bool bankomat(MYSQL* conn){
             if(strcmp(row[3], "1")==0){
 
                 cout<<"Konto jest zablokowane"<<endl;
+                getch();
                 goto bankomat;
 
             }
@@ -870,6 +873,7 @@ bool bankomat(MYSQL* conn){
                 row= mysql_fetch_row(res);
 
                 cout<<"Aktualny stan konta: "<<row[1]<<" PLN"<<endl;
+                getch();
 
             }
 
@@ -889,6 +893,7 @@ bool bankomat(MYSQL* conn){
                     if(val<bankomat_kasa){
 
                         cout<<"Brak srodkow"<<endl;
+                        getch();
 
                     }else{
 
@@ -906,14 +911,16 @@ bool bankomat(MYSQL* conn){
                         row= mysql_fetch_row(res);
 
                         cout<<"Aktualny stan konta: "<<row[1]<<" PLN"<<endl;
+                        getch();
 
                     }
 
                 }
         }
-        else
+        else{
         cout<<"Dane nieprawidlowe"<<endl;
-
+        getch();
+        }
 
 
      /*   n=bankomat_nr.length();
