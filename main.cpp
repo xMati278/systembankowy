@@ -12,7 +12,7 @@ int main()
 
     cout<<"Witaj, co chcesz zrobic?"<<endl;
 
-    int choose;
+    string choose;
 
     start:
 
@@ -23,36 +23,36 @@ int main()
     cout<<"5. Wplata / Wyplata srodkow z konta"<<endl;
     cin>>choose;
 
-    switch(choose){
 
-    case 1:
+    if(choose=="1"){
         if(!login(conn))
             goto menu;
-        break;
+    }
 
-    case 2:
-        if(regist(conn))
+if(choose=="2"){
+                if(regist(conn))
             goto menu;
-        break;
-    case 3:
-        kalkulator_kapital();
+        }
+if(choose=="3"){
+            kalkulator_kapital();
         goto menu;
-        break;
+}
 
-    case 4:
-        kalkulator_walut();
+if(choose=="4"){
+            kalkulator_walut();
             goto menu;
-        break;
-    case 5:
-        bankomat(conn);
+}
+if(choose=="5"){
+            bankomat(conn);
             goto menu;
-        break;
+        }
 
-    default:
+    else{
         cout<<"Nieprawidlowy wybor"<<endl;
+        system("cls");
         goto start;
-
+    }
 
     }
 
-}
+
